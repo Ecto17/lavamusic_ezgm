@@ -42,7 +42,7 @@ export default class Volume extends Command {
 		const embed = this.client.embed();
 		const number = Number(args[0]);
 		if (!player) return await ctx.sendMessage(ctx.locale('event.message.no_music_playing'));
-		if (Number.isNaN(number) || number < 0 || number > 200) {
+		if (Number.isNaN(number) || number < 0 || number > 5000) {
 			let description = '';
 			if (Number.isNaN(number)) description = ctx.locale('cmd.volume.messages.invalid_number');
 			else if (number < 0) description = ctx.locale('cmd.volume.messages.too_low');
