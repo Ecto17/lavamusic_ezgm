@@ -46,7 +46,7 @@ export default class Volume extends Command {
 			let description = '';
 			if (Number.isNaN(number)) description = ctx.locale('cmd.volume.messages.invalid_number');
 			else if (number < 0) description = ctx.locale('cmd.volume.messages.too_low');
-			else if (number > 200) description = ctx.locale('cmd.volume.messages.too_high');
+			else if (number > 10000) description = ctx.locale('cmd.volume.messages.too_high');
 
 			return await ctx.sendMessage({
 				embeds: [embed.setColor(this.client.color.red).setDescription(description)],
